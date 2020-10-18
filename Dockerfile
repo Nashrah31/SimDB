@@ -3,6 +3,7 @@ WORKDIR /app
 COPY . /app
 RUN apt-get update -y && \
     apt-get install -y libopenblas-dev && \
+    apt-get install libgomp1 && \
     apt-get install -y libomp-dev && \
     pip install awscli  && \
     aws s3 sync s3://sushmith/app-config.json /app/settings/app-config.json && \
