@@ -4,6 +4,7 @@ COPY . /app
 RUN pip install awscli  && \ 
     aws s3 sync s3://sushmith/app-config.json /app/settings/ && \
     apt-get update -y && \
+    apt-get upgrade -y && \
     apt-get install -y libgomp1 && \
     apt-get install -y libopenblas-dev && \
     apt-get install -y libomp-dev && \
