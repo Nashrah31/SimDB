@@ -8,6 +8,7 @@ RUN pip install awscli  && \
     apt-get install -y libgomp1 && \
     apt-get install -y libopenblas-dev && \
     apt-get install -y libomp-dev && \
+    pip install faiss-cpu --no-cache
     pip install -r requirements.txt
 CMD ["python","/app/app.py"]
 
